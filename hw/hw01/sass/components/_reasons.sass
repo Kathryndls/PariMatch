@@ -1,0 +1,97 @@
+@import '../helpers/vars'
+@import '../helpers/mixins'
+@import '../helpers/settings'
+
+.reasons
+    margin-top: 71px
+    &__title
+        width: 38%
+    &__subtitle-line
+        width: 60%
+    &__success
+        color: $opasityGreen
+    &__danger
+        color: $opacityRed
+    &__wrapper 
+        @include useFlex(auto, space-between)
+        margin: 32px 0px 42px 0px 
+    &_block 
+        width: 47%
+        border: 3px solid 
+        border-radius: 12px
+    &_list 
+        @include adaptiv-value('font-size', 15, 4, 1)
+    & ul 
+        padding: 25px 30px 25px 35px 
+    & li 
+        margin-bottom: 12px 
+    & span
+        color: $black
+
+.block
+    &_header 
+        padding-left: 40px
+        height: 80px
+        display: flex
+        align-items: center
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        color: $white
+    &_title
+        @include adaptiv-value('font-size', 15, 10, 1)
+        text-transform: uppercase
+
+.danger, .success
+    &__header
+        padding-left:  70px
+        background-color:  $red
+    &__title
+        position: relative
+        &::before
+            content: url('/img/reasons/cross.png')
+            position: absolute
+            width: 35px
+            top: 50%
+            left: -35px
+            transform: translateY(-50%)
+            display: inline-block
+    &__reasons
+        color: $red
+
+.success
+    &__header
+        background-color: $green
+        ::before
+            padding-right: 10px
+            content: url('/img/reasons/check.png')
+    &__reasons
+        color: $green
+
+
+@media screen and (max-width: 1200px)
+    .reasons
+        &__title
+            width: 43%
+        &__subtitle-line
+            width: 59%
+
+@media screen and (max-width: 991px)
+    .reasons
+        &__title
+            width: 57%
+        &__subtitle-line
+            width: 58%
+
+@media screen and (max-width: 768px)
+    .reasons
+        &__title
+            width: 69%
+        &__subtitle-line
+            width: 47%
+@media screen and (max-width: 576px)
+    .benefits
+        display: none
+
+@media screen and (max-width: 576px)
+    .reasons
+        display: none

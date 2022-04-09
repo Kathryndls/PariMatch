@@ -1,0 +1,224 @@
+@import '../helpers/vars'
+@import '../helpers/mixins'
+@import '../helpers/settings'
+
+.slider__header
+    display: flex
+    align-items: center
+    margin-top: 30px
+
+.title 
+    @include adaptiv-value('font-size', 22, 14, 1)
+    @include adaptiv-value('margin-right', 20, 14, 1)
+    position: relative
+    font-weight: 700
+
+.line
+    height: 2px
+    color: $lightBlue
+    background-color: $blackoutGray
+
+.link 
+    color: $lightBlue
+    margin-left: 10px
+
+
+.novelty
+    margin-top: 31px
+    &__subtitle-line
+        width: 78%
+        margin-right: 10px
+
+.slider
+    @include useFlex(strech, space-evenly)
+    margin: 50px 0px 16px 
+    width: 100%
+    position: relative
+    &::after
+        content: ''
+        background: url(/img/news/arrow_right.svg) no-repeat
+        width: 19px
+        height: 42px
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+    &::before
+        content: ''
+        background: url(/img/news/arrow_left.svg) no-repeat
+        height: 42px
+        width: 19px
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+
+    &-item
+        @include adaptiv-value('padding', 20, 2, 1)
+        max-width: 237px
+        width: 100%
+        border: 2px solid $opacityGray
+        border-radius: 12px
+        position: relative
+        &__photo
+            height: 170px
+            width: 170px
+        &:hover
+            border: 2px solid $orange 
+        img 
+            display: block
+            margin: 0 auto
+        &__title
+            display: block
+            margin: 16px 0px
+            color: $lightBlue 
+            &:hover 
+                text-decoration: underline
+                color: $orange
+        &__label
+            position: absolute
+            top: -6px
+            left: 12px
+        &__buttons
+            margin: 15px 0px 0px 0px
+            @include useFlex(center, space-between)
+            button
+                @include adaptiv-value('padding-top', 8, 8, 1)
+                @include adaptiv-value('padding-bottom', 8, 8, 1)
+                @include adaptiv-value('padding-left', 16, 8, 1)
+                @include adaptiv-value('padding-right', 16, 8, 1)
+                @include adaptiv-value('font-size', 14, 9, 1)                
+                background-color: $orange
+                color: $white
+                border: none
+                border-bottom: 4px solid $darkOrange
+                border-radius: 7px
+                @include useFlex(center, center)
+                text-transform: uppercase
+                &:hover 
+                    background-color: $lightBlue
+                    border-bottom: 4px solid $deepBlue
+                img 
+                    margin-right: 8px
+            a 
+                @include adaptiv-value('font-size', 13, 10, 1)
+                color: $lightBlue
+        .price
+            &__current 
+                @include adaptiv-value('font-size', 19, 10, 1)
+                font-weight: 500
+            &__previous 
+                @include adaptiv-value('font-size', 13, 11, 1)
+                text-decoration: line-through
+                color: $orange  
+
+// recommendations 
+.recommendations
+    &__title
+        width: 15%
+    &__subtitle-line
+        width: 70%
+
+// sale
+.sale
+    &__title
+        width: 15%
+    &__subtitle-line
+        width: 74%
+
+
+@media screen and (max-width: 1200px)
+    .title
+        margin-right: 0
+    .slider
+        &::after
+            display: none
+        &::before
+            display: none 
+        &__item
+            margin: 0 3px
+            padding: 15px
+            img.slider-item__photo
+                height: 120px
+                width: 120px
+    .novelty__title
+        width: 12%
+    .novelty__subtitle-line
+        width: 76%
+    .recommendations
+        &__title
+            width: 18%
+        &__subtitle-line
+            width: 66%
+    .sale
+        &__title
+            width: 17%
+        &__subtitle-line
+            width: 73%
+
+
+
+@media screen and (max-width: 980px)
+    .slider
+        .slider__item
+            &:nth-child(4)
+                display: none
+    .slider__item
+        padding: 20px 20px 
+    .slider-item__photo
+        height: 100px
+        width: 100px
+        margin: 0
+    .slider-item__buttons
+        button
+            padding: 4px 8px
+    .line
+        margin-right: 15px
+    .link
+        display: none
+    .arrow_left, .arrow_right
+        width: 25px
+        height: 25px
+        @include useFlex(center, center)
+        position: relative
+        border: 2px solid $shadowGray
+        padding: 4px 
+        border-radius: 50%
+        &:hover
+            border: 2px solid $orange
+        .arw
+            border: solid $orange
+            border-width: 0 3px 3px 0
+            display: inline-block
+            padding: 4px
+            margin-right: 1px
+    .arrow_left
+        margin-right: 10px
+        .arw
+            transform: rotate(135deg)
+    .arrow_right
+        .arw
+            transform: rotate(-45deg)
+    .arrow
+        margin: 0 10px
+        max-width: 20px
+        width: 100%
+        img
+            width: 100%
+    .recommendations
+        &__title
+            width: 18%
+        &__subtitle-line
+            width: 71%
+
+@media screen and (max-width: 750px)
+    .slider
+        .slider__item:nth-child(n+2)
+            display: none
+    .arrow
+        margin: 0 26px
+
+@media screen and (max-width: 576px)
+    .arrow
+        margin: 0 10px 0px 55px 
+

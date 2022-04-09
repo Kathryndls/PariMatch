@@ -1,0 +1,99 @@
+@-webkit-keyframes ldio-lgz85uwngd {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes ldio-lgz85uwngd {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.ldio-lgz85uwngd div {
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
+.ldio-lgz85uwngd > div {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  top: 14px;
+  left: 14px;
+  border-radius: 50%;
+  border: 8px solid #000;
+  border-color: #2b7de9 transparent #2b7de9 transparent;
+  -webkit-animation: ldio-lgz85uwngd 1s linear infinite;
+          animation: ldio-lgz85uwngd 1s linear infinite;
+}
+
+.ldio-lgz85uwngd > div:nth-child(2) {
+  border-color: transparent;
+}
+
+.ldio-lgz85uwngd > div:nth-child(2) div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.ldio-lgz85uwngd > div:nth-child(2) div:before, .ldio-lgz85uwngd > div:nth-child(2) div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -8px;
+  left: 24px;
+  background: #2b7de9;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 64px 0 0 #2b7de9;
+          box-shadow: 0 64px 0 0 #2b7de9;
+}
+
+.ldio-lgz85uwngd > div:nth-child(2) div:after {
+  left: -8px;
+  top: 24px;
+  -webkit-box-shadow: 64px 0 0 0 #2b7de9;
+          box-shadow: 64px 0 0 0 #2b7de9;
+}
+
+.loadingio-spinner-dual-ring-cqkmvary9bi {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  overflow: hidden;
+  background: transparent;
+}
+
+.ldio-lgz85uwngd {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transform: translateZ(0) scale(0.5);
+          transform: translateZ(0) scale(0.5);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  /* see note above */
+}
+
+.ldio-lgz85uwngd div {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+/*# sourceMappingURL=Loader.css.map */

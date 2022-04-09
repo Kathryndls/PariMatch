@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <h1>GitHub Search</h1>
+    <div id="app">
+      <div class="app__search-panel search-panel">
+        <input
+          type="text"
+          id="search-github-user-input"
+          class="search-panel__input text-input"
+          placeholder="Enter username"
+        />
+        <button
+          class="search-panel__search-btn btn btn-primary"
+          id="search-github-user-btn"
+        >
+          Search
+        </button>
+      </div>
+
+      <div class="app__user-info"></div>
+
+      <div class="app__extra-info">
+        <div class="app__extra-info-item app__followers">
+          <h2>Followers</h2>
+          <div class="app__followers-content"></div>
+        </div>
+
+        <div class="app__extra-info-item app__repos">
+          <h2>Repositories</h2>
+          <div class="app__repos-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "COMPONENTS_LIST": [
+    {
+      "title": "Page title",
+      "type": "TITLE",
+      "fields": [
+        {
+          "property": "text",
+          "label": "Title",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "title": "Rich text editor",
+      "type": "RICH_TEXT",
+      "fields": [
+        {
+          "property": "text",
+          "label": "Main content",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "title": "Main image",
+      "type": "IMAGE",
+      "fields": [
+        {
+          "property": "path",
+          "label": "Load main image",
+          "type": "imageLoader"
+        }
+      ]
+    },
+    {
+      "title": "Images",
+      "type": "GALLERY",
+      "fields": [
+        {
+          "property": "images",
+          "label": "Load first image",
+          "type": "imageLoader"
+        },
+        {
+          "label": "Load second image",
+          "type": "imageLoader"
+        },
+        {
+          "label": "Load third image",
+          "type": "imageLoader"
+        }
+      ]
+    },
+    {
+      "title": "CTA",
+      "type": "ACTION_BUTTON",
+      "fields": [
+        {
+          "property": "name",
+          "label": "Button name",
+          "type": "text"
+        },
+        {
+          "property": "url",
+          "label": "Button url",
+          "type": "url"
+        }
+      ]
+    }
+  ]
+}

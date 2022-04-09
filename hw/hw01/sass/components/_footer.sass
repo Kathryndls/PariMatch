@@ -1,0 +1,91 @@
+@import '../helpers/vars'
+@import '../helpers/mixins'
+@import '../helpers/settings'
+
+.footer    
+    width: 100% 
+    background-color: $blue
+    &__container 
+        @include useFlex(flex-start, space-between)
+        color: white
+    &__item
+        margin: 30px 0px
+        line-height: 19px
+        @include contacts($white, $lightBlue)
+        .logo_photo 
+            margin-bottom: 26px
+        .network
+            @include useFlex(auto, flex-start)
+            margin-top: 44px
+        a 
+            color: white
+        &_nav
+            display: block
+    &_contacts__email
+        color: $lightBlue
+
+.warning
+    background-color: $blackDlue
+    color: $white 
+    &__container
+        @include useFlex(auto, space-between)
+    p
+        margin: 23px 0px 11px 0px
+        font-size: 11px
+        font-weight: 300
+
+
+@media screen and (max-width: 1200px)
+    .footer_contacts__bell
+        display: none
+
+@media screen and (min-width: 1200px)
+    .footer_contacts__media
+        display: none
+@media screen and (max-width: 768px)
+    .footer
+        .footer__item
+            .footer__item_nav
+                display: none
+
+@media screen and (max-width: 576px)
+    .footer
+        .footer__item
+            .footer__place
+                display: none
+            .footer__map
+                    display: none
+            .footer__item_nav
+                display: none
+    .footer__link_wrapper
+        display: flex
+        flex-wrap: wrap
+        .footer__link
+            width: 100%
+            padding: 7px 15px
+            border-bottom: 1px solid $white
+            color: $white
+            text-decoration: none
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                right: 10px
+                top: 50%
+                transform: translateY(-50%)
+                border: solid $white
+                border-width: 0 2px 2px 0
+                display: inline-block
+                padding: 3px
+                margin-right: 1px
+                transform: rotate(-45deg)
+        
+    .warning__container
+        display: flex
+        justify-content: center
+        p
+            display: none
+
+@media screen and (min-width: 576px)
+    .footer__link_wrapper
+        display: none   

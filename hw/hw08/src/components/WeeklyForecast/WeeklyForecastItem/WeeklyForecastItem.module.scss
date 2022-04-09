@@ -1,0 +1,39 @@
+@import '/src/scss/helpers/variables';
+
+* {
+   list-style: none;
+}
+
+.WeeklyForecastItem {
+   width: 250px;
+   height: 350px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(190, 217, 255);
+   text-align: center;
+   border: 1px solid $BLUE;
+   border-radius: 7px;
+}
+
+@media (max-width: 1440px) {
+   .WeeklyForecastItem {
+      width: 200px;
+      height: 200px;
+   }
+}
+
+@media (max-width: 1200px) {
+   .WeeklyForecastItem {
+      width: 180px;
+      height: 180px;
+   }
+}
+
+@media (max-width: 991px) {
+   .WeeklyForecastItem {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+   }
+}

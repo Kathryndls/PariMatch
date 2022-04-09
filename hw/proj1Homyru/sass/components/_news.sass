@@ -1,0 +1,176 @@
+@import '../helpers/vars'
+@import '../helpers/mixins'
+@import '../helpers/settings'
+
+.news 
+    width: 100%
+    @include useFlex(auto, space-between)
+    &__company
+        @include adaptiv-value('max-width', 270, 170, 1)
+        width: 100%
+    &__header
+        @include adaptiv-value('max-width', 250, 140, 1)
+        width: 100%
+        @include adaptiv-value('font-size', 22, 12, 1)
+        @include adaptiv-value('padding-top', 8, 1, 1)
+        @include adaptiv-value('padding-bottom', 12, 0, 1)
+        text-transform: uppercase
+        border-bottom: $opacityGray 1px solid
+    &__list
+        @include adaptiv-value('margin-top', 27, 0, 1)
+        @include adaptiv-value('padding-right', 20, 10, 1)
+        li  
+            @include adaptiv-value('margin-bottom', 19, 1, 1)
+            display: flex
+            align-items: flex-start
+            list-style: none
+            border-bottom: $opacityGray 1px dashed
+            &:last-child
+                border: none
+    &__img
+        text-align: center
+    &__img-body
+        @include adaptiv-value('font-size', 12, 6, 1)
+        @include adaptiv-value('height', 71, 20, 1)
+        position: relative
+        img 
+            border-radius: 12px
+            @include adaptiv-value('max-width', 60, 29, 1)
+    &__date
+        position: absolute
+        @include adaptiv-value('padding-top', 6, 2, 1)
+        @include adaptiv-value('padding-bottom', 5, 3, 1)
+        @include adaptiv-value('padding-right', 5, 5, 1)
+        @include adaptiv-value('padding-left', 5, 5, 1)
+        @include adaptiv-value('font-size', 21, 6, 1)
+        left: 50%
+        bottom: -4px
+        transform: translateX(-50%)
+        color: $orange
+        background-color: $white
+        border-radius: 5px
+    &__month
+        @include adaptiv-value('font-size', 12, 7, 1)
+        @include adaptiv-value('margin-top', 5, 2, 1)
+        @include adaptiv-value('margin-bottom', 15, 1, 1)
+    &__descript
+        @include adaptiv-value('margin-left', 16, 8, 1)
+        @include adaptiv-value('font-size', 14, 4, 1)
+        a 
+            @include adaptiv-value('font-size', 14, 6, 1)
+            @include useLink
+            &:hover 
+                text-decoration: underline
+                color: $orange
+        p 
+            @include adaptiv-value('font-size', 14, 6, 1)
+            @include adaptiv-value('margin-bottom', 16, 1, 1)
+            @include adaptiv-value('margin-top', 5, 1, 1)
+    &__brands
+        color: $lightBlue
+        @include adaptiv-value('font-size', 14, 4, 1)
+    .news__product
+        &-header
+            text-transform: uppercase   
+            @include adaptiv-value('padding-top', 13, 6, 1)
+            @include adaptiv-value('padding-bottom', 13, 6, 1)
+            @include adaptiv-value('padding-right', 32, 10, 1)
+            @include adaptiv-value('padding-left', 32, 10, 1)
+            @include adaptiv-value('border-radius', 10, 4, 1)
+            @include adaptiv-value('margin-bottom', 24, 10, 1)
+            background-color: $blackoutGray
+            a
+                @include adaptiv-value('font-size', 14, 2, 1)
+                @include useLink
+            p
+                @include adaptiv-value('font-size', 14, 2, 1)
+                font-style: italic
+        &-slider   
+            position: relative
+            img 
+                width: 100%
+                @include adaptiv-value('height', 376, 110, 1)
+            &::after
+                content: ''
+                background: url(/img/news/arrow_right.svg) no-repeat
+                height: 42px
+                width: 19px
+                position: absolute
+                top: 50%
+                right: 24px
+                transform: translateY(-50%)
+            &::before
+                content: ''
+                background: url(/img/news/arrow_left.svg) no-repeat
+                height: 42px
+                width: 19px
+                position: absolute
+                top: 50%
+                left: 24px
+                transform: translateY(-50%)
+        &-dots
+            right: 21px
+            bottom: 17px
+            display: inline-block
+            position: absolute
+            ul
+                display: flex
+                align-items: center
+                li
+                    margin: 0 1px
+                    @include adaptiv-value('padding', 9, 4, 1)
+                    right: 0
+                    background-color: $white
+                    border-radius: 4px
+                    list-style: none
+                    &:nth-child(1)
+                        background-color: $orange
+
+        .product-title
+            position: absolute
+            top: 0
+            @include adaptiv-value('margin-top', 49, 12, 1)
+            @include adaptiv-value('margin-left', 79, 10, 1)
+            @include adaptiv-value('font-size', 32, 3, 1)
+            &__revolution
+                color: $orange
+                @include adaptiv-value('font-size', 32, 3, 1)
+            &__market
+                color: white
+                @include adaptiv-value('font-size', 32, 3, 1)
+            &__granstream
+                @include adaptiv-value('font-size', 20, 3, 1)
+                color: white   
+                font-style: italic
+            &__subtitle
+                ul
+                    @include adaptiv-value('margin-top', 35, 9, 1)
+                    li 
+                        @include adaptiv-value('font-size', 13, 3, 1)
+                        font-weight: 400
+                        padding-top: 8px
+                        margin-left: 15px
+                        color: $white
+            &__btn 
+                color: $shadowGray
+                height: 44px
+                button
+                    @include adaptiv-value('margin-top', 40, 11, 1)
+                    border: none
+                    border-radius: 7px
+                    @include adaptiv-value('font-size', 16, 2, 1)
+                    text-transform: uppercase
+                    color: $lightBlue
+                    background-color: $white
+                    @include adaptiv-value('padding-top', 8, 5, 1)
+                    @include adaptiv-value('padding-bottom', 8, 5, 1)
+                    @include adaptiv-value('padding-left', 33, 12, 1)
+                    @include adaptiv-value('padding-right', 33, 12, 1)
+                    border-bottom: 3.5px solid $shadowGray
+
+@media screen and (max-width: 750px)
+    .news 
+        &__company
+            display: none
+        &__product
+            display: none

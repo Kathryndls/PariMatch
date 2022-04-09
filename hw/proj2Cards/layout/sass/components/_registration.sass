@@ -1,0 +1,43 @@
+@import '../helpers/vars'
+
+body 
+    background-color: $opasityPink
+
+.form
+    &-wrapper 
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        height: 350px
+        width: 600px
+        border-radius: 25px
+        margin: 150px auto
+        background: $white
+    &__btn
+        border: 1px solid $white
+        border-radius: 7px 
+        margin-top: 20px
+        color: $purple
+        background-color: $opasityPurple
+        width: 400px
+        height: 40px
+        &:hover 
+            background: $purple
+            color: $white
+    &-text 
+        color: $purple
+        font-size: 15px
+        padding: 5px
+    &-input
+        background-color: $opasityPurple
+        outline: none
+        border: 1px solid $opasityPurple
+        border-radius: 7px 
+        width: 400px
+        height: 35px
+        margin-bottom: 10px
+        padding: 5px
+
+
+

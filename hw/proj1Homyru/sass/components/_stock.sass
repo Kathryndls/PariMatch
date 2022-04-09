@@ -1,0 +1,83 @@
+@import '../helpers/vars'
+@import '../helpers/mixins'
+@import '../helpers/settings'
+
+.stock 
+    &__title
+        width: 7%
+    &__subtitle-line
+        width: 82%
+    .slider__item
+        padding: 10px 0
+        a, p.stock__slider_title
+            padding: 5px 10px
+    &__slider
+            @include adaptiv-value('font-size', 10, 4, 1)
+        &__item
+            padding: 0
+        &_header
+            padding-top: 15px 
+            color: $lightBlue
+        &_img
+            padding-top: 15px 
+            width: 100%
+            object-fit: fill
+        &_name
+            @include adaptiv-value('font-size', 12, 6, 1)
+        &_title
+            padding: 10px 0px 15px 
+            @include adaptiv-value('font-size', 14, 11, 1)
+        &_timer
+            display: flex
+            padding: 15px 18px
+            width: 100%
+            background-color: $opacityGray
+            .timer
+                @include useFlex(center, center)
+                &__counter
+                    &-body
+                        span
+                            margin: 0 1px
+                            padding: 5px
+                            @include adaptiv-value('font-size', 15, 10, 1)
+                            border-radius: 5px
+                            background-color: $black
+                            color: $white
+                    &-description
+                        margin-top: 8px
+                        @include adaptiv-value('font-size', 12, 11, 1)
+                        text-align: center
+                        color: $darkGray
+                    &-indefinitely
+                        padding: 15px
+                        font-size: 14px
+                        font-weight: 500
+                        color: $green
+        &_link
+            margin-top: 12px
+            color: $lightBlue
+            @include useFlex(auto, center)
+
+@media screen and (max-width: 1200px)
+    .stock__slider
+        &::after, &::before
+            display: none
+        .slider__item
+            margin: 0 3px
+            padding: 10px 0
+    .stock 
+        &__title
+            width: 10%
+        &__subtitle-line
+            width: 80%
+
+@media screen and (max-width: 992px)
+    .slider__item 
+        max-width: 240px
+        width: 100%
+
+@media screen and (max-width: 768px)
+    .stock__slider_timer
+        padding: 9px 8px 5px 8px 
+
+

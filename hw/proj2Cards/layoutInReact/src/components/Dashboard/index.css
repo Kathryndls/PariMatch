@@ -1,0 +1,96 @@
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block {
+    width: 250px;
+}
+.block__header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.block__header-wrapper b {
+    font-weight: 900;
+    color: #a5a5a5;
+}
+.block-backlog {
+    color: #ef80d1;
+}
+.block_progress {
+    color: #be73d4;
+}
+.block_review {
+    color: #379fcf;
+}
+.block_done {
+    color: #2bca0f;
+}
+.block__title {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.block__card {
+    margin: 15px 0px;
+    background: #fff;
+    padding: 15px;
+    padding-top: 25px;
+    border-radius: 15px;
+    width: 250px;
+}
+.block__card-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.block__card-title {
+    font-weight: 550;
+    font-size: 13px;
+    color: orange;
+    font-family: arial;
+}
+.block__card_btn-edit {
+margin: -10px 0px 7px 0px;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    font-size: 12px;
+    padding: 4px 11px;
+    color: rgba(153, 102, 204, 0.8);
+    background-color: rgba(153, 122, 204, 0.23);
+}
+.block__card-subtitle {
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+
+.block__card_icon {
+width: 220px;
+height: 270px;
+}
+.block__card_actions {
+display: flex;
+padding-top: 15px;
+}
+.block__card_actions p {
+font-weight: 400;
+font-size: 13px;
+color: #a5a5a5;
+padding-right: 18px;
+}
+.block__card_icons-clip {
+width: 8px;
+height: 16px;
+margin: 0px 7px;
+transform: rotate(45deg);
+}
+.block__card_icons-comment {
+width: 18px;
+height: 15px;
+margin: 0px 7px;
+}

@@ -1,0 +1,51 @@
+@import '../helpers/vars'
+@import '../helpers/mixins'
+@import '../helpers/settings'
+
+.brands
+    &__title
+        width: 29%
+    &__subtitle-line
+        width: 60%
+        margin-right: 10px
+    &__list 
+        @include useFlex(center, space-between)
+        margin: 32px 0px 79px 0px 
+        img
+            height: 100%
+            max-width: 200px
+            width: 100%
+
+@media screen and (max-width: 1200px)
+    .brands__list
+        .brands_logo
+            max-width: 150px
+    .brands
+        &__title
+            width: 33%
+        &__subtitle-line
+            width: 55%
+
+@media screen and (max-width: 991px)
+    .brands__list
+        .brands_logo
+            max-width: 120px
+    .brands
+        &__title
+            width: 37%
+        &__subtitle-line
+            width: 51%
+
+@media screen and (max-width: 768px)
+    .brands__list
+        .brands_logo
+            max-width: 90px
+    .brands
+        &__title
+            width: 64%
+        &__subtitle-line
+            width: 48%
+
+@media screen and (max-width: 576px)
+    .brands
+        display: none

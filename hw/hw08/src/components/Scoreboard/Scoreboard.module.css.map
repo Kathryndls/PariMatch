@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,EAAE,SAAS,EAAE,KAAK;EACrB,AAAA,WAAW,CAAC;IACb,UAAU,EAAE,IAAI;GACd",
+    "sources": [
+        "Scoreboard.module.scss"
+    ],
+    "names": [],
+    "file": "Scoreboard.module.css"
+}

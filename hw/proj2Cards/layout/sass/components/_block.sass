@@ -1,0 +1,80 @@
+@import '../helpers/vars'
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+
+.block
+    width: 250px
+    &__header-wrapper
+        display: flex
+        justify-content: space-between
+        b 
+            font-weight: 900
+            color: $gray
+    &-backlog
+        color: $pink
+    &_progress 
+        color: $darkPurple
+    &_review
+        color: $blue
+    &_done
+        color: $green
+    &__title
+        font-weight: 700
+        font-size: 18px
+
+.block__card 
+    margin: 15px 0px 
+    background: $white
+    padding: 15px
+    padding-top: 25px
+    border-radius: 15px
+    width: 250px
+    &-inner
+        position: relative
+        display: flex
+        justify-content: space-between
+    &-title
+        font-weight: 550
+        font-size: 13px
+        color: $orange
+        font-family: arial
+    &_btn-edit
+        margin: -10px 0px 7px 0px
+        border: 1px solid $white
+        border-radius: 7px 
+        font-size: 12px
+        padding: 4px 11px
+        color: $purple
+        background-color: $opasityPurple
+    &-subtitle
+        font-size: 14px
+        margin-top: 4px
+        font-weight: 600
+        padding-bottom: 15px
+
+.block__card 
+    &_icon
+        width: 220px
+        height: 270px
+    &_actions
+        display: flex
+        padding-top: 15px
+        p 
+            font-weight: 400
+            font-size: 13px
+            color: $gray
+            padding-right: 18px
+    &_icons-clip
+        width: 8px
+        height: 16px
+        margin: 0px 7px
+        transform: rotate(45deg)
+    &_icons-comment
+        width: 18px
+        height: 15px
+        margin: 0px 7px
+

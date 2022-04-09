@@ -1,0 +1,276 @@
+@import '../helpers/vars'
+@import '../helpers/mixins'
+@import '../helpers/settings'
+
+.nav 
+    height: 40px
+    background-color: $black
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 2
+    &__container
+        height: 100%
+        @include useFlex(center, space-between)
+        a 
+            color: $white
+            text-decoration: none
+            font-size: 13px
+            &:nth-child(-n+2)
+                position: relative  
+                &:after 
+                    content: ''
+                    position: absolute
+                    right: -18px
+                    top: 4px
+                    border: 5px solid transparent
+                    border-top: 8px solid $orange
+    &__burger
+        display: none
+
+.header 
+    @include useFlex(auto, space-between, wrap)
+    &__handlers
+        width: 100%
+        margin-top: 50px 
+        @include adaptiv-value('margin-bottom', 26, 0, 1)
+        @include useFlex(center, space-between)
+        .logo
+            &__region
+                @include adaptiv-value('font-size', 14, 11, 1)
+                a 
+                    @include useLink
+                    border-bottom: 2px dashed $opasityBlue
+                    @include adaptiv-value('font-size', 13, 10, 1)
+            &__photo
+                margin-top: 7px
+                display: flex
+                img
+                    @include adaptiv-value('width', 190, 150, 1)
+                    padding-right: 8px
+            &__subtitle
+                @include adaptiv-value('font-size', 11, 9, 1)
+                text-transform: uppercase
+                color: $darkGray
+        @include contacts($black, $darkBlue)
+        .contacts
+            @include adaptiv-value('margin-top', 20, 4, 1)
+        .search
+            &__offer
+                margin-top: 31px
+                font-size: 16px
+                text-transform: uppercase
+                display: flex
+                img
+                    margin-right: 7px
+                p
+                    color: $orange
+                    font-style: italic
+                    span
+                        color: $black
+            &__field 
+                margin-top: 11px
+                position: relative
+            &__input 
+                padding: 5px 3px
+                width: 234px
+                height: 30px
+                display: block
+                border: none
+                border-radius: 4px
+                background-color: $lightGray
+            &__btn
+                padding: 3px 9px
+                font-size: 13px
+                height: 26px
+                position: absolute
+                top: 2px
+                right: 2px
+                border-radius: 4px
+                border: none
+                background-color: $orange
+                color: $white
+
+        .account
+            &__links 
+                margin-bottom: 13px
+                @include useFlex(auto, flex-end)
+                a
+                    color: $lightBlue
+                    @include adaptiv-value('font-size', 13, 11, 1)
+                a:nth-child(1)
+                    margin-right: 23px
+            &__basket
+                width: 100%
+                @include useFlex(center)
+                font-weight: 700
+                border-radius: 10px
+                background:  linear-gradient(to bottom right,#E2E5EC, #FFFFFF 55%, #E2E5EC)
+                img 
+                    @include adaptiv-value('padding', 17, 8, 1)
+                a 
+                    color: $lightBlue
+                span 
+                    @include adaptiv-value('font-size', 14, 10, 1)
+                    font-weight: 500
+
+            &__products
+                display: flex
+                margin-top: 5px
+                img
+                    @include adaptiv-value('padding-right', 8, 2, 1)
+                a 
+                    text-decoration: none
+                    font-weight: 700
+                    @include adaptiv-value('font-size', 12, 8, 1)
+                    border-bottom: 2px dashed $darkBlue
+                    color: $black
+                    &:nth-child(1)
+                        @include adaptiv-value('padding-right', 17, 4, 1)
+                    span
+                        padding-left: 3px
+                        color: $lightBlue
+                        @include adaptiv-value('font-size', 12, 8, 1)
+
+    .products
+        margin-bottom: 18px
+        height: 51px
+        display: flex
+        position: relative
+        border-radius: 10px
+        background: $darkOrange
+        &::after
+            content: ""
+            background: url(/img/header/arrow.svg) no-repeat
+            height: 50%
+            width: 10px
+            position: absolute
+            top: 20px
+            right: 5px
+        &__list
+            @include useFlex(auto, space-between)
+            margin-right: 21px
+            height: 48px
+            background-color: $orange
+            border-top-left-radius: 10px
+            border-bottom-left-radius: 10px
+            li
+                list-style: none
+                @include useFlex(auto, start)
+                border-right: 2px solid $opacityOrange 
+                &:last-child
+                    border-right: none
+                &:hover
+                    background-color: $opacityOrange
+                &:first-child
+                    border-top-left-radius: 10px
+                    border-bottom-left-radius: 10px
+                a
+                    margin: 8px  3px
+                    font-size: 12px
+                    text-decoration: none
+                    color: $white
+                    &:hover
+                        text-decoration: underline
+
+
+@media screen and (max-width: 1440px)
+    .nav
+        &__container 
+            display: none
+        &__burger 
+            @include useFlex(center, center)
+            margin-top: 8px
+        &__visual
+            span
+                margin: 4px 10px
+                width: 40px
+                height: 3px
+                display: block
+                background: $orange
+        &__title
+            color: $white
+    .header
+        .search
+            display: none
+        .products__list
+            display: none
+    .account
+        position: relative
+        &__basket_search
+            position: absolute
+            @include adaptiv-value('top', 45, 24, 1)
+            @include adaptiv-value('left', -50, -19, 1)
+
+@media screen and (max-width: 768px)
+    .contacts
+        &__phone
+            display: block
+        &__bell
+            display: none
+        &__info
+            text-align: right
+    .contacts
+        p 
+            display: none
+        a
+            display: none
+        img
+            display: none
+
+@media screen and (max-width: 576px)
+    .header__handlers
+        @include useFlex(flex-start, space-between)
+    .logo__subtitle
+        display: none
+    .contact
+        &__date
+            display: none
+        &__email
+            display: none
+    .account
+        &__basket
+            p
+                display: none
+            img
+                display: none
+        &__enter
+            display: none
+        &__products
+            a
+                display: none
+    .account__basket
+        position: relative
+        &_img
+            img 
+                margin-left: 20px
+        &:after
+            content: '10'
+            padding: 1px 3px
+            font-size: 8px
+            position: absolute
+            top: -10px
+            left: 71px
+            border-radius: 2px
+            color: $orange
+            background:  linear-gradient(to bottom right,#E2E5EC, #FFFFFF 55%, #E2E5EC)
+        &_email
+            margin-top: 7px
+            display: block
+
+@media screen and (min-width: 1440px)
+    .account__basket_search
+        display: none
+
+@media screen and (min-width: 576px)
+    .account__basket_img
+        display: none
+    .contacts__info_media
+        display: none
+
+@media screen and (max-width: 576px)
+    .account__basket_img
+        text-align: right
+    .account__basket_search
+        margin-left: 50px

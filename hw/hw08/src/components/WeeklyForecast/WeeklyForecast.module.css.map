@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAC;EACb,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,aAAa;EAC9B,SAAS,EAAE,IAAI;CACjB;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EACrB,AAAA,eAAe,CAAC;IACb,eAAe,EAAE,YAAY;GAC/B",
+    "sources": [
+        "WeeklyForecast.module.scss"
+    ],
+    "names": [],
+    "file": "WeeklyForecast.module.css"
+}

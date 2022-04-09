@@ -1,0 +1,69 @@
+@import '../helpers/vars'
+@import '../helpers/mixins'
+@import '../helpers/settings'
+
+.indicators
+    &__title
+        width: 15%
+    &__subtitle-line
+        width: 83%
+    &__list
+        margin-top: 41px
+        @include useFlex(auto, space-between)
+        text-align: center
+    &__item
+        width: 20%
+        &:nth-child(2) p
+            @include adaptiv-value('font-size', 54, 24, 1)
+        &:nth-child(3) p 
+            @include adaptiv-value('font-size', 32, 17, 1)
+            color: $orange
+    &__number 
+        margin: 0 auto
+        @include adaptiv-value('font-size', 81, 40, 1)
+        color: #374A59
+    &__number_orange
+        color: $orange
+    & p 
+        width: 125px
+        height: 125px
+        @include useFlex(center, center)
+        border: 2px solid $blackoutGray
+        border-radius: 100%
+        margin-bottom: 11px
+    & span
+        @include adaptiv-value('font-size', 12, 8, 1)
+        font-weight: 500
+        text-transform: uppercase
+
+@media screen and (max-width: 1200px)
+    .indicators
+        &__title
+            width: 18%
+        &__subtitle-line
+            width: 80%
+
+@media screen and (max-width: 992px)
+    .indicators
+        &__item
+            margin: 0 5px
+        &__title
+            width: 20%
+        &__subtitle-line
+            width: 78%
+        & p 
+            width: 105px
+            height: 105px
+
+@media screen and (max-width: 768px)
+    .indicators
+        &__item:nth-child(n+5)
+            display: none
+        &__title
+            width: 24%
+        &__subtitle-line
+            width: 74%
+
+@media screen and (max-width: 576px)
+    .indicators
+        display: none
